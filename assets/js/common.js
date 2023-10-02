@@ -49,10 +49,10 @@ const contactForm = document.getElementById('contact-form'),
 
 const sendEmail = (e) => {
     e.preventDefault();
-
-    // check if the field has  a value
+    
+    // check if the field has  a value 
     if (contactName.value === '' || contactEmail.value === '' || Message.value === '') {
-        // add and remove color
+        // add and remove color 
         contactMessage.classList.remove('color-light');
         contactMessage.classList.add('color-dark');
 
@@ -69,7 +69,7 @@ const sendEmail = (e) => {
             contactMessage.classList.add('color-light');
             contactMessage.textContent = 'Message sent ✔';
 
-            // remove message after 5 seconds
+            // remove message after 5 seconds 
             setTimeout(() => {
                 contactMessage.textContent = '';
             }, 5000);
@@ -88,28 +88,29 @@ const sendEmail = (e) => {
 contactForm.addEventListener('submit', sendEmail);
 
 /*=============== Style Switcher =============== */
-// Function to set the checkbox state in localStorage
-function saveCheckboxState() {
-    const checkbox = document.getElementById('day-night');
-    localStorage.setItem('checkboxState', checkbox.checked);
-}
+const styleSwitcherToggle = document.querySelector('.style__switcher-toggler'),
+styleSwitcher = document.querySelector('.style__switcher');
 
-// Function to load the checkbox state from localStorage
-function loadCheckboxState() {
-    const checkbox = document.getElementById('day-night');
-    const savedState = localStorage.getItem('checkboxState');
+styleSwitcherToggle.addEventListener('click', () => {
+    styleSwitcher.classList.toggle('open');
+});
 
-    if (savedState === 'true') {
-        checkbox.checked = true;
-    } else {
-        checkbox.checked = false;
+// hide switcher on scroll
+window.addEventListener('scroll', () => {
+    if (styleSwitcher.classList.contains('open')) {
+        styleSwitcher.classList.remove('open');
     }
+});
+
+const alternateStyles = document.querySelectorAll('.alternate-style');
+
+function setActiveStyle(color) {
+    alternateStyles.forEach((style) => {
+        if (color === style.getAttribute('title')) {
+            style.removeAttribute('disabled');
+        } else {
+            style.setAttribute('disabled', 'true')
+        }
+    });
 }
-
-// Add an event listener to the checkbox to save its state when it changes
-const checkbox = document.getElementById('day-night');
-checkbox.addEventListener('change', saveCheckboxState);
-
-// Run the code after the DOM has fully loaded
-document.addEventListener('DOMContentLoaded', loadCheckboxState);
 
