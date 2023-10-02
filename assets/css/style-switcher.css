@@ -1,0 +1,50 @@
+/*=============== Remove Filter ===============*/
+#day-night:checked ~ * .home__img {
+    filter: none;
+}
+/* Remove grayscale filter when #day-night is unchecked */
+#day-night:not(:checked) ~ * .home__img {
+    filter: grayscale(100%) contrast(130%); /* Remove the grayscale filter */
+}
+
+/*=============== DARK THEME ===============*/
+#day-night:checked~* {
+    --primary-color: #6d56c1;
+    --primary-color-alt: #7b67c7;
+    --linear-gradient: linear-gradient(54deg,
+            rgba(74, 76, 179, 0.95) 34%,
+            hsla(0, 34%, 71%, 0.95));
+}
+
+/*=============== STYLE SWITCHER ===============*/
+input[type='checkbox'] {
+    display: none;
+}
+
+.style__switcher {
+    height: 22.5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.style__switcher-theme {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all .3s ease;
+}
+
+.style__switcher-theme .ri-settings-line {
+    display: none;
+}
+
+#day-night:checked~* .ri-settings-fill {
+    display: none;
+}
+
+#day-night:checked~* .ri-settings-line {
+    display: block;
+}
