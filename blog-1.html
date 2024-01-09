@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--=============== Favicon ===============-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--=============== Remixicons ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!--=============== Swiper Css ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <!--=============== Css ===============-->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/style-switcher.css" />
+  <link rel="stylesheet" href="/assets/css/skins/color-1.css" />
+
+  <!--=============== Skin Colors ===============-->
+  <link rel="stylesheet" href="/assets/css/skins/color-1.css" class="alternate-style" title="color-1" disabled />
+  <link rel="stylesheet" href="/assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled />
+
+  <title>Milan Rai - A Fullstack Web Developer, Software Engineer</title>
+</head>
+
+<body>
+  <!--=============== Style Switch ===============-->
+  <input type="checkbox" id="day-night">
+
+  <!--=============== Header ===============-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li>
+            <a href="/" class="nav__link">Home</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-fill"></i>
+        </div>
+      </div>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-fill"></i>
+      </div>
+
+      <!--=============== Style Switch ===============-->
+      <div class="style__switcher">
+        <label for="day-night" class="style__switcher-theme">
+          <i class="ri-settings-line"></i>
+          <i class="ri-settings-fill"></i>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <!--=============== Blog Details ===============-->
+  <div class="blog__header"></div>
+
+  <section class="container">
+    <div class="blog__details">
+      <a href="/" class="back__to-home text-xs"><i class="ri-arrow-left-line"></i> Back</a>
+
+      <h3 class="post__details-title text-lg">HOW TO USE CSS-PREPROCESSOR</h3>
+      <p class="post__details-date text-sm">April, 20, 2017</p>
+
+
+      <p class="post__details text-lg">Tired of repetitive code and messy stylesheets? Well, step aside, plain old CSS,
+        because preprocessors are here to revolutionize your web development workflow. These powerful tools offer
+        superpowers like variables, mixins, nesting, and more, making your code cleaner, more organized, and way more
+        fun to write.</p>
+
+      <p class="post__details text-lg">
+        <span style="font-weight: bold;">What are CSS Preprocessors?</span><br> Imagine CSS with superpowers like
+        variables,
+        mixins, nesting, and even basic math. That's essentially what preprocessors offer. They act as an extension to
+        standard CSS, allowing you to write code in a more efficient and maintainable way. Think of them as a secret
+        language that compiles into plain CSS your browser understands (don't worry, browsers only speak normal CSS,
+        they'll never know your secret!).
+      </p>
+
+      <p class="post__details text-lg">
+        <span style="font-weight: bold;">Why Use Preprocessors?</span>
+        <li class="text-lg">Reduced Duplication: Say goodbye to repeating the same color values and styles over and
+          over. Preprocessor variables store shared values, keeping your code DRY (Don't Repeat Yourself).</li>
+        <li class="text-lg">Modular CSS: Organize your styles into reusable mixins like building blocks, making your
+          code easier to manage and scale.</li>
+        <li class="text-lg">Improved Readability: Nesting your selectors lets you indent and structure your code like a
+          map, making it clear and visually appealing.</li>
+        <li class="text-lg">Enhanced Functionality: Use conditional statements and loops to apply styles based on
+          specific conditions, adding dynamic behavior to your website.</li>
+      </p>
+      <br>
+
+      <p class="post__details text-lg">
+        <span style="font-weight: bold;">Popular Preprocessors:</span><br>
+        <li class="text-lg">Sass: The undisputed king of preprocessors, offering flexible syntax and a vast community.
+          Choose between SCSS (superset of CSS) and the more concise Sass syntax.</li>
+        <li class="text-lg">Less: A beginner-friendly option with a simpler syntax closer to standard CSS. Offers basic
+          preprocessor features like variables and mixins.</li>
+      </p>
+      <br>
+
+      <p class="post__details text-lg">
+        <span style="font-weight: bold;">Getting Started:</span>
+        <li class="text-lg">Pick your champion: Sass offers power and flexibility, while Less is easier to learn for
+          beginners. Choose
+          the one that suits your comfort level and project needs.</li>
+        <li class="text-lg">Install a compiler: Both Sass and Less require a compiler to translate your preprocessor
+          code into regular
+          CSS. Popular options include Sass/LibSass, Compass, and Prepros.</li>
+        <li class="text-lg">Create your preprocessor file: Use .scss for Sass and .less for Less. It's like a normal CSS
+          file, but with
+          superpowers!</li>
+      </p>
+      <br>
+
+      <p class="post__details text-lg">
+        <span style="font-weight: bold;">Let's Dive into the Action:</span><br>
+        <li class="text-lg">
+          Variable Magic: Imagine defining a single $primary-color
+          variable and using it everywhere instead of copying and pasting the hex code! Preprocessors make life easier.
+
+          <pre>
+            // Sass
+            $primary-color: #ff5252;
+            
+            body {
+              background-color: $primary-color;
+            }
+            
+            .button {
+              color: $primary-color;
+            }
+            </pre>
+        </li>
+
+        <li class="text-lg">
+          Mixin Madness: Mixins are like pre-made cocktails for your styles. Combine common declarations into reusable
+          blocks, eliminating duplicate code and keeping your CSS organized.
+
+          <pre>
+            // Sass
+            @mixin button-style {
+              padding: 10px 20px;
+              border: 1px solid #ddd;
+              border-radius: 5px;
+              color: #fff;
+              background-color: $primary-color;
+            }
+
+            .button1 {
+              @include button-style;
+            }
+
+            .button2 {
+              @include button-style;
+              background-color: #333;
+            }
+            </pre>
+        </li>
+
+        <li class="text-lg">
+          Nesting for Clarity: Tired of flat, sprawling CSS? Nesting lets you indent selectors based on their hierarchy,
+          making your code visually organized and easier to navigate.
+
+          <pre>
+            // Sass
+            header {
+              h1 {
+                font-size: 2em;
+                padding: 10px;
+              }
+
+              nav {
+                ul {
+                  list-style: none;
+                  padding: 0;
+                }
+
+                li {
+                  float: left;
+                  padding: 10px;
+                }
+              }
+            }
+            </pre>
+        </li>
+      </p>
+
+      <p class="post__details text-lg">
+        <span style="font-weight: bold;">Beyond the Basics:</span> This is just the tip of the iceberg! Preprocessors
+        offer a vast array of features, from dynamic calculations to responsive design tricks. As you get comfortable,
+        explore nesting with mixins, conditionals to apply styles based on specific situations, and loops to generate
+        repetitive elements with ease.
+      </p>
+
+      <figure>
+        <img src="/assets/img/scss.webp" alt="">
+        <figcaption class="text-sm">This is a basic example of SCSS in comparison with CSS!</figcaption>
+      </figure>
+
+      <p class="post__details text-lg">
+        <span style="font-weight: bold;">Remember:</span>
+        <li class="text-lg">Preprocessors compile into plain CSS: Browsers only understand standard CSS, so your
+          compiled code will be used by them.</li>
+        <li class="text-lg">Learn your syntax: Each preprocessor has its own syntax, so be sure to learn the basics for
+          your chosen tool.</li>
+        <li class="text-lg">Practice makes perfect: Don't be afraid to experiment! Explore different features and find
+          creative ways to use preprocessors to make your code awesome.</li>
+      </p>
+      <br>
+
+      <p class="post__details text-lg">
+        <span style="font-weight: bold;">Conclusion:</span><br>
+        Ditch the CSS struggle, embrace the preprocessor superpower! Say goodbye to code duplication, tangled
+        stylesheets, and hello to organized, efficient magic. Variables, mixins, nesting - these features keep your code
+        clean, clear, and conquerable. Choose your tool (Sass or Less!), grab your compiler, and code like a
+        preprocessor pro! Unleash the CSS beast within!
+      </p>
+
+      <div class="post__social-share">
+        <span class="post__share text-lg">Share this post:</span>
+
+        <div class="post__social-links">
+          <a class="post__share-link" data-sharer="linkedin" data-url="https://raimilan.com.np/blog_details.html"><i
+              class="ri-linkedin-box-fill" target="_blank"></i></a>
+          <a class="post__share-link" data-sharer="facebook" data-hashtag=""
+            data-url="https://raimilan.com.np/blog_details.html"><i class="ri-facebook-box-fill"
+              target="_blank"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--=============== Contact ===============-->
+  <section class="contact section" id="contact">
+    <div class="contact__content container">
+      <h2 class="section__title">Get in touch_</h2>
+
+      <div class="contact__container grid">
+        <div class="contact__info">
+          <dl class="contact__list">
+            <dt>Phone:</dt>
+            <dd>+977 9819003860</dd>
+            <dt>Skype:</dt>
+            <dd>milanbasakhora</dd>
+            <dt>Email:</dt>
+            <dd>milanbasakhora@gmail.com</dd>
+          </dl>
+
+          <ul class="contact__socials">
+            <li>
+              <a href="https://www.facebook.com/milanbasakhora" class="contact__social-link">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/milanbasakhora" class="contact__social-link">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://github.com/milanbasakhora" class="contact__social-link">Github</a>
+            </li>
+            <li>
+              <a href="https://youtube.com/milanbasakhora" class="contact__social-link">Youtube</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__form">
+          <p class="contact__form-title">Or just write me a letter here_</p>
+
+          <form action="" id="contact-form">
+            <div class="contact__input-div">
+              <input type="text" name="name" placeholder="Your name" class="contact__input" id="contact-name">
+            </div>
+
+            <div class="contact__input-div">
+              <input type="email" name="email" placeholder="Your e-mail" class="contact__input" id="contact-email">
+            </div>
+
+            <div class="contact__input-div">
+              <textarea name="message" id="message" placeholder="Type the message here" class="contact__input textarea"
+                cols="30" rows="10"></textarea>
+            </div>
+
+            <p class="contact__message text-sm" id="contact-message"></p>
+
+            <button type="submit" class="button contact__button">SEND</button>
+          </form>
+
+          <p class="footer__copy">&copy; 2023 Milan Rai. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--=============== Mixitup ===============-->
+  <script src="/assets/js/mixitup.min.js"></script>
+
+  <!--=============== Swiper Js ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!--=============== Email Js ===============-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!--=============== Js ===============-->
+  <script src="/assets/js/main.js"></script>
+
+  <!--=============== Common ===============-->
+  <script src="/assets/js/common.js"></script>
+
+  <!--=============== Sharer Js ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+
+</body>
+
+</html>
