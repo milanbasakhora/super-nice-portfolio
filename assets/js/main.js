@@ -1,12 +1,12 @@
 /*=============== Active Link =============== */
-const navlink = document.querySelectorAll('.nav__link');
+const navlink = document.querySelectorAll(".nav__link");
 
 function activeLink() {
-    navlink.forEach((a) => a.classList.remove('active-link'));
-    this.classList.add('active-link');
+  navlink.forEach((a) => a.classList.remove("active-link"));
+  this.classList.add("active-link");
 }
 
-navlink.forEach((a) => a.addEventListener('click', activeLink));
+navlink.forEach((a) => a.addEventListener("click", activeLink));
 
 /*=============== Background Header =============== */
 // function scrollHeader() {
@@ -19,35 +19,51 @@ navlink.forEach((a) => a.addEventListener('click', activeLink));
 // window.addEventListener('scroll', scrollHeader);
 
 /*=============== Mixitup Filter =============== */
-let mixerProjects = mixitup('.projects__container', {
-    selectors: {
-        target: '.project__item',
-    },
-    animation: {
-        duration: 300
-    },
+let mixerProjects = mixitup(".projects__container", {
+  selectors: {
+    target: ".project__item",
+  },
+  animation: {
+    duration: 300,
+  },
 });
 
 /* Active Work */
-const linkWork = document.querySelectorAll('.category__btn');
+const linkWork = document.querySelectorAll(".category__btn");
 
 function activeWork() {
-    linkWork.forEach((a) => a.classList.remove('active-work'));
-    this.classList.add('active-work');
+  linkWork.forEach((a) => a.classList.remove("active-work"));
+  this.classList.add("active-work");
 }
 
-linkWork.forEach((a) => a.addEventListener('click', activeWork))
+linkWork.forEach((a) => a.addEventListener("click", activeWork));
 
 /*=============== Testimonials Swiper =============== */
 var testiSwiper = new Swiper(".testimonial__container", {
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
 });
+
+/*=============== Show Calculated Age && Display Current Year =============== */
+// Assuming the birth year is 2000 (replace it with the actual birth year)
+var birthYear = 2000;
+
+// Calculate the current year
+var currentYear = new Date().getFullYear();
+
+// Calculate the age
+var age = currentYear - birthYear;
+
+// Display the calculated age in the <dd> element
+document.getElementById("calculatedAge").textContent = age;
+
+// Display current year on copyright section
+document.getElementById("currentYear").textContent = currentYear;
