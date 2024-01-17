@@ -3,9 +3,9 @@
     filter: none;
 }
 /* Remove grayscale filter when #day-night is unchecked */
-#day-night:not(:checked) ~ * .home__img {
-    filter: grayscale(100%) contrast(130%); /* Remove the grayscale filter */
-}
+/* #day-night:not(:checked) ~ * .home__img { */
+    /*filter: grayscale(100%) contrast(130%); /* Remove the grayscale filter */
+/* } */
 
 /*=============== DARK THEME ===============*/
 #day-night:checked~* {
