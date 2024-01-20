@@ -135,72 +135,72 @@
         <li class="text-lg">
           Variable Magic: Imagine defining a single $primary-color
           variable and using it everywhere instead of copying and pasting the hex code! Preprocessors make life easier.
-
-          <pre>
-            // Sass
-            $primary-color: #ff5252;
-            
-            body {
-              background-color: $primary-color;
-            }
-            
-            .button {
-              color: $primary-color;
-            }
-            </pre>
         </li>
+        <br>
+      <pre class="text-sm">
+        // Sass
+        $primary-color: #ff5252;
+          
+        body {
+          background-color: $primary-color;
+        }
+          
+        .button {
+          color: $primary-color;
+        }
+      </pre>
 
-        <li class="text-lg">
-          Mixin Madness: Mixins are like pre-made cocktails for your styles. Combine common declarations into reusable
-          blocks, eliminating duplicate code and keeping your CSS organized.
+      <li class="text-lg">
+        Mixin Madness: Mixins are like pre-made cocktails for your styles. Combine common declarations into reusable
+        blocks, eliminating duplicate code and keeping your CSS organized.
+      </li>
+      <br>
+      <pre class="text-sm">
+        // Sass
+        @mixin button-style {
+          padding: 10px 20px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          color: #fff;
+          background-color: $primary-color;
+        }
 
-          <pre>
-            // Sass
-            @mixin button-style {
-              padding: 10px 20px;
-              border: 1px solid #ddd;
-              border-radius: 5px;
-              color: #fff;
-              background-color: $primary-color;
+        .button1 {
+          @include button-style;
+        }
+
+        .button2 {
+          @include button-style;
+          background-color: #333;
+        }
+        </pre>
+
+      <li class="text-lg">
+        Nesting for Clarity: Tired of flat, sprawling CSS? Nesting lets you indent selectors based on their hierarchy,
+        making your code visually organized and easier to navigate.
+      </li>
+      <br>
+      <pre class="text-sm">
+          // Sass
+          header {
+            h1 {
+              font-size: 2em;
+              padding: 10px;
             }
 
-            .button1 {
-              @include button-style;
-            }
+            nav {
+              ul {
+                list-style: none;
+                padding: 0;
+              }
 
-            .button2 {
-              @include button-style;
-              background-color: #333;
-            }
-            </pre>
-        </li>
-
-        <li class="text-lg">
-          Nesting for Clarity: Tired of flat, sprawling CSS? Nesting lets you indent selectors based on their hierarchy,
-          making your code visually organized and easier to navigate.
-
-          <pre>
-            // Sass
-            header {
-              h1 {
-                font-size: 2em;
+              li {
+                float: left;
                 padding: 10px;
               }
-
-              nav {
-                ul {
-                  list-style: none;
-                  padding: 0;
-                }
-
-                li {
-                  float: left;
-                  padding: 10px;
-                }
-              }
             }
-            </pre>
-        </li>
+          }
+          </pre>
       </p>
 
       <p class="post__details text-lg">
