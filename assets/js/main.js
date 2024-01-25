@@ -51,19 +51,3 @@ var testiSwiper = new Swiper(".testimonial__container", {
   mousewheel: true,
   keyboard: true,
 });
-
-/*=============== Show Calculated Age && Display Current Year =============== */
-// Assuming the birth year is 2000 (replace it with the actual birth year)
-var birthYear = 2000;
-
-// Calculate the current year
-var currentYear = new Date().getFullYear();
-
-// Calculate the age
-var age = currentYear - birthYear;
-
-// Display the calculated age in the <dd> element
-document.getElementById("calculatedAge").textContent = age;
-
-// Display current year on copyright section
-document.getElementById("currentYear").textContent = currentYear;
